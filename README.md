@@ -52,6 +52,7 @@ By default, the container will download the latest version of the "vanilla" [Min
       * [Running an Canyon server](#running-an-canyon-server)
       * [Running a SpongeVanilla server](#running-a-spongevanilla-server)
       * [Running a Fabric Server](#running-a-fabric-server)
+      * [Running a Limbo server](#running-a-limbo-server)
    * [Running a server with a Feed the Beast modpack](#running-a-server-with-a-feed-the-beast-modpack)
       * [Environment Variables:](#environment-variables)
       * [Upgrading](#upgrading)
@@ -127,7 +128,7 @@ By default, the container will download the latest version of the "vanilla" [Min
       * [Enabling Autopause](#enabling-autopause)
    * [Running on RaspberryPi](#running-on-raspberrypi)
 
-<!-- Added by: runner, at: Sun Aug  1 17:09:36 UTC 2021 -->
+<!-- Added by: runner, at: Sun Aug 15 17:44:45 UTC 2021 -->
 
 <!--te-->
 
@@ -552,6 +553,20 @@ docker run -d -v /path/on/host:/data ... \
 ```
 
 In order to add mods, you have two options:
+
+### Running a Limbo server
+
+A [Limbo](https://github.com/LOOHP/Limbo) server can be run by setting `TYPE` to `LIMBO`.
+
+Configuration options with defaults:
+
+- `LIMBO_BUILD`=LATEST
+
+  The `VERSION` will be ignored so locate the appropriate value from [here](https://ci.loohpjames.com/job/Limbo/) to match the version expected by clients.
+
+- `FORCE_REDOWNLOAD`=false
+- `LIMBO_SCHEMA_FILENAME`=default.schem
+- `LEVEL`="Default;${LIMBO_SCHEMA_FILENAME}"
 
 ## Running a server with a Feed the Beast modpack
 
