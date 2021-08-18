@@ -2,6 +2,7 @@
 #set -x
 # Use this variable to indicate a list of branches that docker hub is watching
 branches_list=(
+  'java7'
   'java8'
   'java8-multiarch'
   'java8-openj9'
